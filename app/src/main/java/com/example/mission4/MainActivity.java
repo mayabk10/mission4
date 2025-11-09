@@ -16,20 +16,20 @@ import androidx.core.view.WindowInsetsCompat;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
-private TextView num1;
+    private TextView num1;
     private TextView num2;
     private TextView num3;
-    private Button button;
     private ImageView imageView;
+    private Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        button = button.findViewById(R.id.button);
-        num1 = num1.findViewById(R.id.TextNumber1);
-        num2 = num2.findViewById(R.id.TextNumber2);
-        num3 = num3.findViewById(R.id.TextNumber3);
-        imageView = imageView.findViewById(R.id.imageView);
+         button = findViewById(R.id.button);
+         num1 = findViewById(R.id.TextNumber1);
+        num2 =  findViewById(R.id.TextNumber2);
+        num3 =  findViewById(R.id.TextNumber3);
+        imageView = findViewById(R.id.imageView);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,11 +43,11 @@ private TextView num1;
                 num2.setText(number2);
                 num3.setText(number3);
                 if(num1 == num2 && num2==num3){
-                    Toast.makeText(MainActivity.this,"you win!",Toast.LENGTH_SHORT);
+                    Toast.makeText(MainActivity.this,"you win!",Toast.LENGTH_SHORT).show();
                     imageView.setImageResource(R.drawable.dfzoe25780d92ab3bc040bf9a302eca7497042e);
                 }
                 else{
-                    Toast.makeText(MainActivity.this,"you lose!",Toast.LENGTH_SHORT);
+                    Toast.makeText(MainActivity.this,"you lose!",Toast.LENGTH_SHORT).show();
                     imageView.setImageResource(R.drawable.images);
                 }
 
