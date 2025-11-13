@@ -36,13 +36,13 @@ public class MainActivity extends AppCompatActivity {
                 Random random = new Random();
                 int number1 = random.nextInt(3);
                 Random random2 = new Random();
-                int number2 = random.nextInt(3);
+                int number2 = random2.nextInt(3);
                 Random random3 = new Random();
-                int number3 = random.nextInt(3);
-                num1.setText(number1);
-                num2.setText(number2);
-                num3.setText(number3);
-                if(num1 == num2 && num2==num3){
+                int number3 = random3.nextInt(3);
+                num1.setText(String.valueOf(number1));
+                num2.setText(String.valueOf(number2));
+                num3.setText(String.valueOf(number3));
+                if(number1==number2 && number2==number3){
                     Toast.makeText(MainActivity.this,"you win!",Toast.LENGTH_SHORT).show();
                     imageView.setImageResource(R.drawable.dfzoe25780d92ab3bc040bf9a302eca7497042e);
                 }
